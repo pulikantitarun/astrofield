@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose a focused AstroField improvement
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What observing or imaging problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Hardware and safety considerations
+      description: Include affected devices, limits, confirmations and failure behavior.
+  - type: textarea
+    id: references
+    attributes:
+      label: Relevant INDI, Ekos, PHD2 or ASTAP references

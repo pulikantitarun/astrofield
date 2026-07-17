@@ -1,0 +1,22 @@
+[Unit]
+Description=AstroField mobile bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=astroberry
+Group=astroberry
+EnvironmentFile=-/etc/astrofield-bridge.env
+StateDirectory=astrofield-bridge
+ExecStart=/usr/bin/python3 /opt/astrofield-bridge/astrofield_bridge.py
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/astroberry/.PHDGuidingV2 /home/astroberry/Documents/PHD2
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a reproducible AstroField problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Remove credentials, tokens, public addresses and precise observatory coordinates.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: App commit/version, phone, Pi/OS, KStars, INDI, PHD2, devices and drivers.
+    validations:
+      required: true
+  - type: dropdown
+    id: validation
+    attributes:
+      label: Validation environment
+      options:
+        - Real astronomy hardware
+        - Simulator or mock
+        - Source-only observation
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs or screenshots
